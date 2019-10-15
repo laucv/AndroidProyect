@@ -28,12 +28,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         misDatos = getResources().getStringArray(R.array.datos);
         lista = findViewById(R.id.listaLV);
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                misDatos);
+        MiAdaptador miAdaptador = new MiAdaptador(this, R.layout.item_lista, misDatos);
 
-        lista.setAdapter(adaptador);
+        lista.setAdapter(miAdaptador);
         lista.setOnItemClickListener(this);
     }
 
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         String texto = "Opcion elegida: " + position + " -> " +  parent.getItemAtPosition((int) id).toString();
 
-        Log.i(TAG_LAURA, "Opción: " + position + "");
+        Log.i(TAG_LAURA, "Opción: " + position + " -> " +  parent.getItemAtPosition((int) id).toString());
         //Barras que aparecen por debajo
         Snackbar.make(parent, texto, Snackbar.LENGTH_LONG).show();
     }

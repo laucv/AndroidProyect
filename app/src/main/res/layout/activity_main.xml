@@ -7,6 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Lista de zumos"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="32sp"></TextView>
+
     <ListView
         android:id="@+id/listaLV"
         android:layout_width="wrap_content"
