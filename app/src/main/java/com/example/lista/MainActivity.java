@@ -3,14 +3,16 @@ package com.example.lista;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.snackbar.Snackbar;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     static final String TAG_LAURA = "Laura";
 
@@ -32,8 +34,15 @@ public class MainActivity extends AppCompatActivity {
                 misDatos);
 
         lista.setAdapter(adaptador);
+        lista.setOnItemClickListener(this);
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        String texto = "Opcion elegida: " + position + " -> " +  parent.getItemAtPosition((int) id).toString();
 
-
+        Log.i(TAG_LAURA, "Opción: " + position + "");
+        //Barras que aparecen por debajo
+        Snackbar.make(parent, texto, Snackbar.LENGTH_LONG).show();
+    }
 }
