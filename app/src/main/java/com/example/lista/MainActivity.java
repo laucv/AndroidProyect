@@ -12,19 +12,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    static final String[] misDatos = {
-            "Zumo de naranja", "Zumo de piña",
-            "Zumo de uva", "Zumo de manzana",
-            "Zumo 1", "Zumo 2"
-    };
+    static final String TAG_LAURA = "Laura";
 
-    ListView lista;
+    private String[] misDatos;
+
+    private ListView lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        misDatos = getResources().getStringArray(R.array.datos);
         lista = findViewById(R.id.listaLV);
 
         ArrayAdapter<String> adaptador = new ArrayAdapter<>(

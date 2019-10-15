@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="datos">
+        <item>Zumo de naranja</item>
+        <item>Zumo de piña</item>
+        <item>Zumo de manzana</item>
+        <item>Zumo de uva</item>
+    </array>
+</resources>
