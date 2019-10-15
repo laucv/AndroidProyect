@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="datos">
-        <item>Zumo de naranja</item>
-        <item>Zumo de piña</item>
-        <item>Zumo de manzana</item>
-        <item>Zumo de uva</item>
+        <item>Naranja</item>
+        <item>Piña</item>
+        <item>Manzana</item>
+        <item>Uva</item>
+        <item>Pera</item>
+        <item>Plátano</item>
+        <item>Multifrutas</item>
+        <item>Fresa</item>
+        <item>Limón</item>
+        <item>Piña y uva</item>
+        <item>Cereza</item>
+        <item>Arandanos</item>
     </array>
 </resources>

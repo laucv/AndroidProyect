@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         misDatos = getResources().getStringArray(R.array.datos);
         lista = findViewById(R.id.listaLV);
 
-        MiAdaptador miAdaptador = new MiAdaptador(this, R.layout.item_lista, misDatos);
+        MiAdaptador miAdaptador = new MiAdaptador(this, R.layout.item_layout, misDatos);
 
         lista.setAdapter(miAdaptador);
         lista.setOnItemClickListener(this);
